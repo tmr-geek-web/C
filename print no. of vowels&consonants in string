@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<string.h>
+
+
+int main()
+{
+	char pass[50];
+	int count=0, mount=0;
+	
+	printf("Entered password:");
+	scanf("%s", pass);
+	
+	for(int i=0;pass[i]!='\0';i++)
+	{
+		if(pass[i]=='a'||pass[i]=='e'||pass[i]=='i'||pass[i]=='o'||pass[i]=='u'||pass[i]=='A'||pass[i]=='E'||pass[i]=='I'||pass[i]=='O'||pass[i]=='U')
+		{
+			count++;
+		}
+		else
+		{
+			mount++;
+		}
+}
+	
+	printf("Vowels:%d\n", count);
+	
+	printf("Consonants:%d",mount);
+	
+	
+	
+	return 0;
+
+}
+

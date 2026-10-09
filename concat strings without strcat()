@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+	char str[100]="hello";
+	char st[100]="world";
+	int i, j;
+	
+	int len=strlen(str);
+	
+	//printf("Enter a string:");
+//	scanf("%s", str);		//taking the string input from user
+	
+	for(i=0,j=len; st[i]!='\0';i++, j++)
+	{
+		str[j]=st[i];	//transferring contents of st to str
+	}
+	str[j]='\0'; 
+	
+	
+	printf("%s",str);
+	
+	return 0;
+}
+	
+

@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int n, i, j, num = 1;
+
+    printf("Enter number of rows: ");
+    scanf("%d", &n);
+
+    int arr[n][n];  // 2D array to store triangle
+
+    // Fill the array with consecutive numbers
+    for (i = 0; i < n; i++) {
+        for (j = 0; j <= i; j++) {
+            arr[i][j] = num++;
+        }
+    }
+
+    // Print Floyd's Triangle
+    printf("\nFloyd's Triangle:\n");
+    for (i = 0; i < n; i++) {
+    	for (j = 0; j < n - i - 1; j++) {
+            printf("   ");  // spacing
+        }
+        for (j = 0; j <= i; j++) {
+            printf("%3d ", arr[i][j]);  // formatted spacing
+        }
+        printf("\n");
+    }
+
+    return 0;
+}

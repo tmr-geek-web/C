@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+struct Distance {
+    int km;
+    int m;
+};
+
+int main() {
+    struct Distance d;
+    int total_m;
+
+    // Take input
+    printf("Enter distance in kilometers: ");
+    scanf("%d", &d.km);
+
+    printf("Enter distance in meters: ");
+    scanf("%d", &d.m);
+
+    // Convert km to meters and add
+    total_m = (d.km * 1000) + d.m;
+
+    // Print results
+    printf("Total distance = %d meters\n", total_m);
+    printf("Total distance = %.2f kilometers\n", total_m / 1000.0);
+
+    return 0;
+}

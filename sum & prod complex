@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+struct complex {
+    int real;
+    int img;
+};
+
+struct complex  add(struct complex x, struct complex y)
+{
+	struct complex result;
+	result.real=x.real+y.real;
+	result.img=x.img+y.img;
+	return result;
+}
+
+struct complex  mult(struct complex x, struct complex y)
+{
+	struct complex result;
+	result.real=(x.real*y.real)-(x.img*y.img);
+	result.img=(x.real*y.img)+(x.img*y.real);
+	return result;
+}
+
+int main() {
+    
+    struct complex c1, c2, sum, prod;
+
+    // Take input
+    printf("Enter complex number: ");
+    scanf("%d%d", &c1.real, &c1.img);
+
+    printf("Enter complex number: ");
+    scanf("%d%d", &c2.real, &c2.img);
+
+    sum=add(c1, c2);
+    prod=mult(c1,c2);
+    
+    printf("Sum=%d+%di\n",sum.real, sum.img);
+    printf("Product=%d+%di", prod.real, prod.img);
+
+    return 0;
+}
